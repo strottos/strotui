@@ -1,0 +1,19 @@
+[package]
+name = "strotui"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+crossterm = { version = "0.28.1", features = ["event-stream", "serde"] }
+ratatui = { version = "0.28.1", features = ["unstable-widget-ref"] }
+serde = "1.0.210"
+tracing = "0.1.40"
+
+[dev-dependencies]
+assertor = "0.0.3"
+insta = "1.40.0"
+tracing-test = "0.2.5"
+
+[profile.dev.package]
+insta.opt-level = 3
+similar.opt-level = 3

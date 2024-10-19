@@ -1,0 +1,13 @@
+---
+source: src/widgets/text.rs
+expression: buffer
+---
+Buffer {
+    area: Rect { x: 0, y: 0, width: 13, height: 1 },
+    content: [
+        "Hello, world!",
+    ],
+    styles: [
+        x: 0, y: 0, fg: Black, bg: White, underline: Reset, modifier: NONE,
+    ]
+}
