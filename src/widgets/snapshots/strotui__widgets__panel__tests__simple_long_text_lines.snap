@@ -1,0 +1,24 @@
+---
+source: src/widgets/panel.rs
+expression: buffer
+---
+Buffer {
+    area: Rect { x: 0, y: 0, width: 40, height: 12 },
+    content: [
+        "┌Panel Test────────────────────────────┐",
+        "│                                      ↑",
+        "│  Let's make several strings that     █",
+        "│  are longer than the 40 characters   █",
+        "│  of the rectangle.                   █",
+        "│  Let's make several strings that     █",
+        "│  are longer than the 40 characters   █",
+        "│  of the rectangle.                   █",
+        "│  Let's make several strings that     █",
+        "│  are longer than the 40 characters   ║",
+        "│                                      ↓",
+        "└──────────────────────────────────────┘",
+    ],
+    styles: [
+        x: 0, y: 0, fg: Reset, bg: Reset, underline: Reset, modifier: NONE,
+    ]
+}
