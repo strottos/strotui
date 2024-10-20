@@ -103,15 +103,14 @@ impl<'a> Panel<'a> {
     fn render_children(&self, area: Rect, buf: &mut Buffer) -> usize {
         let mut y = area.top() as usize;
         let width = area.right() - area.left();
+        tracing::trace!("area {:?}", area);
 
         for child in &self.children {
-            tracing::trace!("area {:?}", area);
-            tracing::trace!("child {:?}", child);
             let height = child.get_height(width).min(area.bottom() - y as u16);
 
             if y <= area.bottom() as usize {
                 let child_area = Rect::new(area.left(), y as u16, width, height);
-                tracing::trace!("child_area {:?}", child_area);
+                tracing::trace!("Rendering child in area {:?}", child_area);
                 match child {
                     PanelWidget::Text(text) => text.render_ref(child_area, buf),
                 }
